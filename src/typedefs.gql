@@ -1,0 +1,22 @@
+type Query {
+  posts: [Post!]
+  post(id: ID!): Post
+
+  viewer: User
+  user(id: ID!): User
+}
+
+type Post {
+  id: ID!
+  title: String!
+  contents: String
+  author: User!
+}
+
+type User {
+  id: ID!
+  name: String!
+  email: String!
+  profilePicture: String
+  posts: [Post!]
+}

@@ -1,0 +1,29 @@
+{
+  "name": "try-graphql-jit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "GraphQL-JIT Example application",
+  "main": "src/server.ts",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon --watch './src/*.{ts,gql}' --exec 'node --experimental-specifier-resolution=node --loader ts-node/esm' src/server.ts"
+  },
+  "dependencies": {
+    "@graphql-tools/schema": "^8.3.1",
+    "graphql": "^16.1.0",
+    "graphql-jit": "^0.7.2",
+    "node-fetch": "^3.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.12",
+    "nodemon": "2.0.15",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2"
+  },
+  "keywords": [
+    "graphql",
+    "graphql-jit",
+    "typescript",
+    "graphql-server"
+  ]
+}
