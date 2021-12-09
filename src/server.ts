@@ -22,6 +22,12 @@ async function create() {
       case "/graphiql":
         graphiqlHandler(req, res).catch((e) => internalError(res, e.message));
         break;
+      case "/":
+        res.setHeader("location", "/graphiql");
+        res.writeHead(302);
+
+        res.end();
+        break;
       default:
         notFoundError(res, req.url);
     }
